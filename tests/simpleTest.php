@@ -14,7 +14,7 @@ class simpleTest extends TestCase
    public function testThatWeCanGetTheFirstName():void
     {
         $this->user->setFirstName("Tarek");
-        $this->assertEquals( $this->user->getFirstName(),"Tarek");
+        $this->assertEquals( "Tarek",$this->user->getFirstName());
     }
     /** @test */
     public function thatWeCanGetTheLastName():void
@@ -22,7 +22,7 @@ class simpleTest extends TestCase
         # code...
         
         $this->user->setLastName("Sherif");
-        $this->assertEquals( $this->user->getLastName(),"Sherif");
+        $this->assertEquals("Sherif", $this->user->getLastName());
     }
 /** @test */
     public function thatWeCanGetTheFullName():void
@@ -31,7 +31,7 @@ class simpleTest extends TestCase
         
         $this->user->setFirstName("Tarek");
         $this->user->setLastName("Sherif");
-        $this->assertEquals( $this->user->getFullName(),"Tarek Sherif");
+        $this->assertEquals("Tarek Sherif", $this->user->getFullName());
     }
     /** @test */
       public function thatWeCanGetTheEmail():void
@@ -40,7 +40,7 @@ class simpleTest extends TestCase
         
         $email="Eng.tarek.sherif@gmail.com";
         $this->user->setEmail($email);
-        $this->assertEquals($this->user->getEmail() ,$email);
+        $this->assertEquals($email,$this->user->getEmail() );
         $this->assertContains("@",$this->user->getEmail() );
 
     }
@@ -66,10 +66,10 @@ class simpleTest extends TestCase
         $this->assertArrayHasKey("email",$this->userData);
 
 
-        $this->assertEquals($this->userData["firstName"],$firstName);
-        $this->assertEquals($this->userData["lastName"],$lastName);
-        $this->assertEquals($this->userData["fullName"],"$firstName $lastName");
-        $this->assertEquals($this->userData["email"],$email);
+        $this->assertEquals($firstName,$this->userData["firstName"]);
+        $this->assertEquals($lastName,$this->userData["lastName"]);
+        $this->assertEquals("$firstName $lastName",$this->userData["fullName"]);
+        $this->assertEquals($email,$this->userData["email"]);
 
     }
     
