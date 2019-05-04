@@ -3,9 +3,10 @@ language: php
 php:
   - 7.3
 
-befor_script:
-  - composer install
-#script: phpunit --configuration phpunit.xml --coverage-text
 
+befor_script:
+  -  composer install
+#script: phpunit --configuration phpunit.xml --coverage-text
 script:
-  - ./vendor/bin/phpunit
+  -  composer install
+  -  composer test
