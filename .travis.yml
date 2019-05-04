@@ -1,11 +1,10 @@
 language: php
 
 php:
-  - 5.6
-  - 7.0
+  - 7.3
 
 befor_script:
-  - composer require phpunit/phpunit
+  - composer install
 #script: phpunit --configuration phpunit.xml --coverage-text
 
 script:
