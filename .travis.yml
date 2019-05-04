@@ -9,4 +9,4 @@ befor_script:
 #script: phpunit --configuration phpunit.xml --coverage-text
 
 script:
-  - php vendor/phpunit/phpunit/phpunit
+  - ./vendor/bin/phpunit
