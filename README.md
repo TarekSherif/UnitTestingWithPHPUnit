@@ -1,3 +1,4 @@
+# ![Build Status](https://travis-ci.org/TarekSherif/UnitTestingWithPHPUnit.svg?branch=master)
 # learn php unit Test
 
 ## Dependency used
